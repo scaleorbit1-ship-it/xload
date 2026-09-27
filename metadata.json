@@ -1,0 +1,6 @@
+{
+  "name": "X & Twitter Video Downloader HD",
+  "description": "Download videos, GIFs, and audio from X (Twitter) in Full HD 1080p, 720p, and MP3 with instant stream preview, batch queue, and frame capture.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
