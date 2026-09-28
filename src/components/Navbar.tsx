@@ -1,14 +1,13 @@
-import { History, Layers } from 'lucide-react';
+import { History } from 'lucide-react';
 import { AppLogo } from './AppLogo';
 import { PWAInstallButton } from './PWAInstallButton';
 
 interface NavbarProps {
-  onOpenBatch: () => void;
   onOpenHistory: () => void;
   historyCount: number;
 }
 
-export function Navbar({ onOpenBatch, onOpenHistory, historyCount }: NavbarProps) {
+export function Navbar({ onOpenHistory, historyCount }: NavbarProps) {
   return (
     <header className="sticky top-0 z-40 w-full px-3 sm:px-6 pt-3 pb-2 transition-all">
       <div className="max-w-7xl mx-auto liquid-glass rounded-2xl px-3 sm:px-5 h-14 sm:h-16 flex items-center justify-between shadow-[0_10px_35px_rgba(0,0,0,0.4)]">
@@ -29,13 +28,6 @@ export function Navbar({ onOpenBatch, onOpenHistory, historyCount }: NavbarProps
           <a href="#faq" className="hover:text-white transition-colors">
             FAQ
           </a>
-          <button
-            onClick={onOpenBatch}
-            className="hover:text-white flex items-center gap-1.5 transition-colors cursor-pointer"
-          >
-            <Layers className="w-3.5 h-3.5 text-[#38bdf8]" />
-            <span>Batch Queue</span>
-          </button>
         </nav>
 
         {/* Zone 3: Apple Liquid Glass Interactive Actions */}
@@ -43,16 +35,6 @@ export function Navbar({ onOpenBatch, onOpenHistory, historyCount }: NavbarProps
           
           {/* PWA Install Button for ChromeOS & Mobile */}
           <PWAInstallButton />
-
-          {/* Batch Button for mobile view */}
-          <button
-            onClick={onOpenBatch}
-            className="md:hidden liquid-glass-btn p-2 rounded-xl text-white cursor-pointer"
-            aria-label="Open Batch Queue"
-            title="Batch Queue"
-          >
-            <Layers className="w-4 h-4 text-[#38bdf8]" />
-          </button>
 
           {/* History Drawer Trigger Button */}
           <button

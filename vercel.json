@@ -2,14 +2,22 @@
   "version": 2,
   "buildCommand": "vite build",
   "outputDirectory": "dist",
-  "rewrites": [
+  "cleanUrls": true,
+  "routes": [
     {
-      "source": "/api/(.*)",
-      "destination": "/api"
+      "src": "/ads\\.txt",
+      "dest": "/ads.txt"
     },
     {
-      "source": "/(.*)",
-      "destination": "/index.html"
+      "src": "/api/(.*)",
+      "dest": "/api/$1"
+    },
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
     }
   ]
 }

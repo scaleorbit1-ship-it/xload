@@ -25,46 +25,29 @@ export function AppLogo({ size = 38, className = '', showText = true }: AppLogoP
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <defs>
-              <linearGradient id="logoCyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#38bdf8" />
-                <stop offset="100%" stopColor="#0284c7" />
-              </linearGradient>
-              <linearGradient id="logoEmeraldGrad" x1="100%" y1="0%" x2="0%" y2="100%">
-                <stop offset="0%" stopColor="#6ee7b7" />
-                <stop offset="100%" stopColor="#14b8a6" />
-              </linearGradient>
-              <linearGradient id="logoCoreGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-                <stop offset="0%" stopColor="#ffffff" />
-                <stop offset="100%" stopColor="#7dd3fc" />
-              </linearGradient>
-              <filter id="logoGlow" x="-20%" y="-20%" width="140%" height="140%">
-                <feGaussianBlur stdDeviation="3" result="blur" />
-                <feComposite in="SourceGraphic" in2="blur" operator="over" />
-              </filter>
-            </defs>
-
-            {/* Wing 1: Diagonal Backslash top-left & bottom-right */}
+            {/* Wing 1: Diagonal Backslash top-left & bottom-right (Electric Sky) */}
             <path
               d="M 24 22 L 40 44 L 32 54 L 18 36 C 15 32 16 26 21 23 Z"
-              fill="url(#logoCyanGrad)"
+              fill="#38bdf8"
+              opacity="0.95"
             />
             <path
               d="M 68 78 L 52 56 L 60 46 L 74 64 C 77 68 76 74 71 77 Z"
-              fill="url(#logoCyanGrad)"
+              fill="#38bdf8"
+              opacity="0.95"
             />
 
-            {/* Wing 2: Top-right slash */}
+            {/* Wing 2: Top-right slash (Cyber Emerald) */}
             <path
               d="M 76 23 C 81 26 82 32 79 36 L 56 66 L 46 66 L 36 50 C 33 46 34 40 39 37 L 45 32 C 49 28 55 28 59 32 L 67 42 L 72 24 C 73 23 74 22 76 23 Z"
-              fill="url(#logoEmeraldGrad)"
+              fill="#34d399"
+              opacity="0.9"
             />
 
-            {/* Central Aerodynamic Down Arrow Core with Specular Tip */}
+            {/* Central Aerodynamic Down Arrow Core with Specular White Glow */}
             <path
               d="M 46 34 L 54 34 C 56 34 58 36 58 38 L 58 58 L 68 58 C 71 58 72 62 70 64 L 52 82 C 51 83 49 83 48 82 L 30 64 C 28 62 29 58 32 58 L 42 58 L 42 38 C 42 36 44 34 46 34 Z"
-              fill="url(#logoCoreGrad)"
-              filter="url(#logoGlow)"
+              fill="#ffffff"
             />
           </svg>
         </div>

@@ -22,8 +22,8 @@ export function FAQSection() {
       a: "When using Safari on iPhone or iPad, the file will download to your iCloud Drive 'Downloads' folder or local 'Files' app. You can tap Share and select 'Save Video' to move it to your Photos camera roll."
     },
     {
-      q: "How does the Batch Queue Downloader work?",
-      a: "Click 'Batch Queue' in the navigation bar. You can paste up to 10 Twitter/X links simultaneously (one per line) and download them one-by-one or in bulk."
+      q: "Can I save individual high-res frame snapshots from a video?",
+      a: "Yes! While previewing any video, you can pause or scrub to any frame and click the 'Snapshot Frame' camera icon to capture and download that exact video frame as a full-resolution PNG image."
     },
     {
       q: "Are the downloaded videos watermark-free?",

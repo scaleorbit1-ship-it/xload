@@ -5,7 +5,6 @@ import { VideoResultCard } from './components/VideoResultCard';
 import { FeaturesSection } from './components/FeaturesSection';
 import { FAQSection } from './components/FAQSection';
 import { Footer } from './components/Footer';
-import { BatchQueueModal } from './components/BatchQueueModal';
 import { HistorySideNav } from './components/HistorySideNav';
 import { ToastContainer, ToastMessage } from './components/Toast';
 import { ReflectGridGlow } from './components/ReflectGridGlow';
@@ -21,7 +20,6 @@ export default function App() {
   const [isLoading, setIsLoading] = useState(false);
   const [samples, setSamples] = useState<TweetData[]>([]);
   const [history, setHistory] = useState<HistoryItem[]>([]);
-  const [isBatchOpen, setIsBatchOpen] = useState(false);
   const [isHistoryOpen, setIsHistoryOpen] = useState(false);
   const [toasts, setToasts] = useState<ToastMessage[]>([]);
 
@@ -158,7 +156,6 @@ export default function App() {
 
       {/* Top Bar Navigation */}
       <Navbar
-        onOpenBatch={() => setIsBatchOpen(true)}
         onOpenHistory={() => setIsHistoryOpen(true)}
         historyCount={history.length}
       />
@@ -203,19 +200,6 @@ export default function App() {
 
       {/* Footer */}
       <Footer />
-
-      {/* Modals */}
-      <BatchQueueModal
-        isOpen={isBatchOpen}
-        onClose={() => setIsBatchOpen(false)}
-        onSelectResult={(tweet) => {
-          setActiveTweet(tweet);
-          setTimeout(() => {
-            resultRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          }, 100);
-        }}
-        onShowToast={addToast}
-      />
 
       {/* Side Nav History Drawer */}
       <HistorySideNav
